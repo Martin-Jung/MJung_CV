@@ -1,0 +1,166 @@
+%% start of file `template.tex'.
+% https://www.overleaf.com/latex/examples/curriculum-vitae/ztykfkztnqfh#.W5RN4BjTXmh
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,serif]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% Custom settings 
+% adapted from here: https://www.overleaf.com/19393901jdrnbjgnxxgj#/72174498/
+\usepackage{settings}
+
+% character encoding and change the fonts
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+  %% Warning: EB Garamond contains no bold!! Substituting for Junicode Bold, but *may not look nice nor consistent*!!
+   \setmainfont[Ligatures=TeX,SmallCapsFeatures={Letters=SmallCaps,LetterSpace=5},BoldFont=Junicode Bold]{EB Garamond}
+  \setsansfont[Ligatures=TeX]{Lato}
+  \setmonofont{Inconsolata}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[tracking=smallcaps]{microtype}
+  \usepackage[type1]{cabin}
+  \usepackage[varqu,varl]{zi4}
+  \useosf  %% Comment out if you prefer lining figures rather than old style figures
+\fi
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+ %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{import}
+
+% ------------------------------------------------------------------------- %
+
+% personal data
+\name{Martin}{Jung}
+\title{Short CV}                               % optional, remove / comment the line if not wanted
+%\address{School of Life sciences, University of Sussex, Brighton, BN1 9RH, UK}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+44 07761868701}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{martinjung@zoho.com}                               % optional, remove / comment the line if not wanted
+\homepage{martin-jung.github.io}                         % optional, remove / comment the line if not wanted
+% Add a few social media links
+\extrainfo{
+\faLinkedinSquare \ \href{https://www.linkedin.com/in/jungmartin}{jungmartin} 
+\quad 
+}
+
+% optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{me_portrait} % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}} }
+\makeatother
+\renewcommand*{\bibliographyitemlabel}{\textbf{\arabic{enumiv}}}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with multiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\small{Final year PhD researcher at the University of Sussex (UK), where I investigate how biodiversity is influenced by past land dynamics. Widely interested in (Macro-)Ecology, Conservation Biology and Sustainability Science with regards to global change. Specialist in data science, remote-sensing analysis and interpreting spatial data. Many years of experience in project management and providing quantitative solutions to environmental problems.}
+
+% ---- Paid career so far ---- %
+\section{Career history}
+\vspace{4pt}
+
+\begin{itemize}
+
+\item[]{\cventry{01/2017--07/2018}{Associate doctoral tutor}{University of Sussex}{Brighton, UK}{}{\vspace{3pt} Assisted in the teaching and marking of biology and geography courses for BSc and MSc students. Led one day intensive workshops in GIS \& data analysis for graduate students.}}
+
+\vspace{4pt}
+
+\item[]{\cventry{02/2015--09/2015}{Research assistant}{Lund university - Centre for Sustainability studies}{Lund, Sweden}{}{\vspace{3pt} Worked for the \href{http://www.kimnicholas.com/uploads/2/5/7/6/25766487/brochure.pdf}{AGROMES} project (funded by the Swedish research council) mapping the environmental, economic,and social tradeoffs of European farming systems across scales. Involved the acquisition, manipulation, analysis and visualisation of economic and environmental data. Collaboration with the University of British Columbia and Sussex University }}
+
+\vspace{4pt}
+
+\item[]{\cventry{10/2014--08/2015}{External database contractor}{Imperial College London}{London, UK}{}{\vspace{3pt} 
+Developed, implemented and administrated a spatially explicit relational database (PostgreSQL \& PostGIS) for the \href{https://biofrag.wordpress.com/}{BIOFRAG} project. Writing parsing scripts and SQL queries to maintain the database.}}
+
+\vspace{4pt}
+
+\item[]{\cventry{05/2013--04/2015}{Laboratory assistant}{University of Copenhagen}{Copenhagen, Denmark}{}{\vspace{3pt} 
+Laboratory and field work as well as statistical analyses for biological pest control (Fruitgrowth, Softpest, INBIOsoil) projects. }}
+
+\vspace{4pt}
+
+\item[]{\cventry{10/2012--09/2012}{Research assistant}{gaiac - research institute}{Aachen, Germany}{}{\vspace{3pt} 
+GIS and statistical analyses around the Virtual Forest project and urban ecology. Plant vegetation surveys on windfall calamity areas}}
+
+\vspace{4pt}
+
+\item[]{\cventry{07/2006--05/2013}{Part-time database maintainer}{Solarenergie-F{\"o}rderverein Deutschland e.V.,}{Aachen, Germany}{}{\vspace{3pt} 
+Data maintenance and user support of the largest database for private solar panel owners.}}
+
+\end{itemize}
+
+% --- Education  -----------------------
+\section{Education}
+\vspace{4pt}
+
+\begin{itemize}
+
+\item[]{\cventry{09/2015-- 03/2019}{\textit{in preparation}}{PhD in Environmental Sciences}{\href{http://www.sussex.ac.uk}{University of Sussex, UK}}{}{Specialising in big data, remote sensing \& macroecological analyses}}
+\vspace{4pt}
+
+\item[]{\cventry{09/2013--08/2015}{\textit{12 (A)}}{MSc in Biology}{\href{https://macroecology.ku.dk/}{University of Copenhagen, Denmark}}{}{Specialisation in Macroecology \& African land systems. Four months of self-organized solo fieldwork in Tanzania and Kenya}}  % arguments 3 to 6 can be left empty
+\vspace{4pt}
+\item[]{\cventry{10/2009--07/2012}{\textit{1.9 (A)}}{BSc in Biology}{\href{https://www.uni-marburg.de/fb17/fachgebiete/naturschutz/naturschutz/welcome}{University of Marburg, Germany}}{}{Specialising in Conservation ecology. Six months fieldwork in east Poland.}}
+
+\end{itemize}
+
+% \subsection{Notable Projects}
+%
+% \vspace{5pt}
+% 
+% \begin{itemize}
+% 
+% \item{\textbf{Masters Project (Ongoing):} \textit{'Development of an Intelligent Humanoid Robot'}
+%
+% \vspace{3pt}
+% 
+% \small{I am part of a team developing a 5ft autonomous humanoid robot. This ambitious project requires strong team-working skills and high technical ability. I work well as part of the team, contributing in group discussions and taking initiative to set myself tasks when the next stage of the project is not clear. Given the role of electronics supervisor I am responsible for setting goals and ensuring all the electronic system designs are realised on time and meet the specifications of the project.}}
+
+% \end{itemize}
+
+% ---------------------------------------------------------------------- %
+\section{Professional skills}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item \textbf{Languages:} Fluent in German \& English, basic literacy in Danish.
+\item \textbf{General:} Very good project and time management skills. Experienced in giving presentations, working well solo or in a team.
+\item \textbf{Statistics:} Univariate and multivariate statistics. Knowledge about bayesian and modern machine learning techniques. Time series analyses.
+\item \textbf{Coding:} Proficient in: R, Python, Bash, Javascript, SQL, HTML, CSS, TeX, Learning Julia.
+\item \textbf{Databases:} MySQL, PostgreSQL, PostGIS, SQLite, Microsoft Access.
+\item \textbf{General computer skills:} Broad Linux \& Microsoft Windows knowledge. Most existing GIS software. Comfortable with big data. Cloud computing knowledge (Google Cloud, Google Earth Engine, AWS). Excellent command of Microsoft office.
+
+\end{itemize}
+
+
+% ---------------------------------------------------------------------- %
+
+\end{document}
+
+%% end of file `template.tex'.
