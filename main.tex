@@ -1,0 +1,364 @@
+%% start of file `template.tex'.
+% https://www.overleaf.com/latex/examples/curriculum-vitae/ztykfkztnqfh#.W5RN4BjTXmh
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,serif]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% Custom settings 
+% adapted from here: https://www.overleaf.com/19393901jdrnbjgnxxgj#/72174498/
+\usepackage{settings}
+
+% character encoding and change the fonts
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+  %% Warning: EB Garamond contains no bold!! Substituting for Junicode Bold, but *may not look nice nor consistent*!!
+   \setmainfont[Ligatures=TeX,SmallCapsFeatures={Letters=SmallCaps,LetterSpace=5},BoldFont=Junicode Bold]{EB Garamond}
+  \setsansfont[Ligatures=TeX]{Lato}
+  \setmonofont{Inconsolata}
+\else % If you're using pdfLaTeX or latex
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[tracking=smallcaps]{microtype}
+  \usepackage[type1]{cabin}
+  \usepackage[varqu,varl]{zi4}
+  \useosf  %% Comment out if you prefer lining figures rather than old style figures
+\fi
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+%\setlength{\hintscolumnwidth}{2cm}                % if you want to change the width of the column with the dates
+ %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage{import}
+
+% ------------------------------------------------------------------------- %
+
+% personal data
+\name{Martin}{Jung}
+\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{School of Life sciences, University of Sussex, Brighton, BN1 9RH, UK}{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+44 07761868701}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{martinjung@zoho.com}                               % optional, remove / comment the line if not wanted
+\homepage{martin-jung.github.io}                         % optional, remove / comment the line if not wanted
+% Add a few social media links
+\extrainfo{
+\faLinkedinSquare \ \href{https://www.linkedin.com/in/jungmartin}{jungmartin} 
+\quad \textbullet \quad 
+\faGithub \ \href{https://github.com/Martin-Jung}{Martin-Jung} 
+}
+
+% optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{me_africa} % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}} }
+\makeatother
+\renewcommand*{\bibliographyitemlabel}{\textbf{\arabic{enumiv}}}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\small{Final year PhD researcher at the University of Sussex (UK), where I investigate how biodiversity is influenced by past land dynamics. Widely interested in (Macro-)Ecology, Conservation Biology and Sustainability Science with regards to global change. Specialist in data science, remote-sensing analysis and interpreting spatial data. Many years of experience in project management and providing quantitative solutions to environmental problems.}
+
+\section{Career history}
+% ---- Paid career so far ---- %
+\subsection{Paid employment}
+\vspace{4pt}
+
+\begin{itemize}
+
+\item{\cventry{January 2017--July 2018}{Associate doctoral tutor}{University of Sussex}{Brighton, UK}{}{\vspace{3pt} Assisted in the teaching and marking of biology and geography courses for BSc and MSc students. Led one day intensive workshops in GIS \& data analysis for graduate students.}}
+
+\vspace{4pt}
+
+\item{\cventry{February 2015--September 2015}{Research assistant}{Lund university - Centre for Sustainability studies}{Lund, Sweden}{}{\vspace{3pt} Worked for the \href{http://www.kimnicholas.com/uploads/2/5/7/6/25766487/brochure.pdf}{AGROMES} project (funded by the Swedish research council) mapping the environmental, economic,and social tradeoffs of European farming systems across scales. Involved the acquisition, manipulation, analysis and visualisation of economic and environmental data. Collaboration with the University of British Columbia and Sussex University }}
+
+\vspace{4pt}
+
+\item{\cventry{October 2014--August 2015}{External database contractor}{Imperial College London}{London, UK}{}{\vspace{3pt} 
+Developed, implemented and administrated a spatially explicit relational database (PostgreSQL \& PostGIS) for the \href{https://biofrag.wordpress.com/}{BIOFRAG} project. Writing parsing scripts and SQL queries to maintain the database.}}
+
+\vspace{4pt}
+
+\item{\cventry{May 2013--April 2015}{Laboratory assistant}{University of Copenhagen}{Copenhagen, Denmark}{}{\vspace{3pt} 
+Laboratory and field work as well as statistical analyses for biological pest control (Fruitgrowth, Softpest, INBIOsoil) projects. }}
+
+\vspace{4pt}
+
+\item{\cventry{October 2012--September 2012}{Research assistant}{gaiac - research institute}{Aachen, Germany}{}{\vspace{3pt} 
+GIS and statistical analyses around the Virtual Forest project and urban ecology. Plant vegetation surveys on windfall calamity areas}}
+
+\vspace{4pt}
+
+\item{\cventry{July 2006--May 2013}{Part-time database maintainer}{Solarenergie-F{\"o}rderverein Deutschland e.V.,}{Aachen, Germany}{}{\vspace{3pt} 
+Data maintenance and user support of the largest database for private solar panel owners.}}
+
+\end{itemize}
+
+% --- Non paid stuff  -----------------------
+\subsection{Internships \& Volunteer activities}
+\vspace{4pt}
+
+\begin{itemize}
+
+\item{\cventry{September 2011--October 2011}{Internship}{gaiac - research institute}{Leipzig, Germany}{}{\vspace{3pt} 
+GIS analyses for habitat connectivity and restoration.}}
+
+\vspace{2pt}
+
+\item{\cventry{May 2011--September 2012}{Volunteer project leader}{\href{https://save-wildlife.org}{SAVE wildlife conservation fund}}{W{\"u}lfrath, Germany}{}{\vspace{3pt} 
+Responsible for managing social media and coordinating with stake holders in Cameroon and the USA.}}
+
+\vspace{2pt}
+
+\item{\cventry{Spring 2011 \& Summer 2012}{Volunteer}{University of Marburg}{Bialowieza Forest, Poland}{}{\vspace{3pt} 
+Ornithological research}}
+
+\vspace{2pt}
+
+\item{\cventry{July 2008--June 2009}{Assistant national park ranger}{NLWKN}{Langeoog, Germany}{}{\vspace{3pt} 
+Ornithological assessments, public relation including guides tours and workshops}}
+
+\end{itemize}
+
+\section{Academic Qualifications}
+
+\vspace{5pt}
+
+\begin{itemize}
+
+\item{\cventry{September 2015-- March 2019}{\textit{in preparation}}{PhD in Environmental Sciences}{\href{http://www.sussex.ac.uk}{University of Sussex, UK}}{}{Specialising in big data, remote sensing \& macroecological analyses}}
+\vspace{4pt}
+\item{\cventry{2013--2015}{\textit{12 (A)}}{MSc in Biology}{\href{https://macroecology.ku.dk/}{University of Copenhagen, Denmark}}{}{Specialisation in Macroecology \& African land systems. 4 months of self-organized solo fieldwork in Tanzania and Kenya}}  % arguments 3 to 6 can be left empty
+\vspace{4pt}
+\item{\cventry{2009--2012}{\textit{1.9 (A)}}{BSc in Biology}{\href{https://www.uni-marburg.de/fb17/fachgebiete/naturschutz/naturschutz/welcome}{University of Marburg, Germany}}{}{Specialising in Conservation ecology. 6 months fieldwork in east Poland.}}
+
+\end{itemize}
+
+% \subsection{Notable Projects}
+%
+% \vspace{5pt}
+% 
+% \begin{itemize}
+% 
+% \item{\textbf{Masters Project (Ongoing):} \textit{'Development of an Intelligent Humanoid Robot'}
+%
+% \vspace{3pt}
+% 
+% \small{I am part of a team developing a 5ft autonomous humanoid robot. This ambitious project requires strong team-working skills and high technical ability. I work well as part of the team, contributing in group discussions and taking initiative to set myself tasks when the next stage of the project is not clear. Given the role of electronics supervisor I am responsible for setting goals and ensuring all the electronic system designs are realised on time and meet the specifications of the project.}}
+
+% \end{itemize}
+
+% ---------------------------------------------------------------------- %
+\section{Professional skills}
+
+\vspace{6pt}
+
+\begin{itemize}
+
+\item \textbf{Languages:} Fluent in German \& English, basic literacy in Danish.
+\item \textbf{General:} Very good project and time management skills. Experienced in giving presentations, working well solo or in a team.
+\item \textbf{Statistics:} Univariate and multivariate statistics. Knowledge about bayesian and modern machine learning techniques. Time series analyses.
+\item \textbf{Coding:} Proficient in: R, Python, Bash, Javascript, SQL, HTML, CSS, TeX, Learning Julia.
+\item \textbf{Databases:} MySQL, PostgreSQL, PostGIS, SQLite, Microsoft Access.
+\item \textbf{General computer skills:} Broad Linux \& Microsoft Windows knowledge. Most existing GIS software. Comfortable with big data. Cloud computing knowledge (Google Cloud, Google Earth Engine, AWS). Excellent command of Microsoft office.
+
+\end{itemize}
+
+
+% ---------------------------------------------------------------------- %
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plainyr-rev}
+%\bibliography{MyPub}                        % 'publications' is the name of a BibTeX file
+\section{Publications}
+
+\subsection{Peer reviewed}
+
+ \begin{bibenum}
+ 
+       \item  \textbf{Jung, M.}, Rowhani, P., Newbold, T., Bentley, L., Purvis, A. and Scharlemann, J. P.W. (2018) "Local species assemblages are influenced more by past than current dissimilarities in photosynthetic activity" \emph{Ecography}, \doi{ 10.1111/ecog.04031 }
+
+      \item Norfolk, O., \textbf{Jung, M.}, Platts, P. J., Malaki, P., Odeny, D., and Marchant, R. (2017) "Birds in the matrix: the role of agriculture in avian conservation in the Taita Hills, Kenya." \emph{African Journal of Ecology}, \doi{10.1111/aje.12383}
+
+      \item \textbf{Jung, M.}, Hill, S. L. L., Platts, P. J., Marchant, R., Siebert, S., Fournier, A., Munyekenye, F. B., Purvis, A., Burgess, N. D. and Newbold, T. (2017) "Local factors mediate the response of biodiversity to land use on two African mountains." \emph{Animal Conservation}, \doi{10.1111/acv.12327}
+      
+      \item Hudson, L., [...], \textbf{Jung, M.} \textsl{et al.} (2017) "The database of the PREDICTS (Projecting Responses of Ecological Diversity In Changing Terrestrial Systems)
+project." \emph{Ecology and Evolution}, 7(1), 145-188. \doi{10.1002/ece3.2579}
+      
+      \item Newbold, T. [...], \textbf{Jung, M.} \textsl{et al.} (2016) "Has land use pushed terrestrial biodiversity beyond the planetary boundary? A global assessment." \emph{Science}, 353(6296):288-291 \doi{10.1126/science.aaf2201}
+
+      \item Martin,P.A., \textbf{Jung, M.}, Brearley, F.Q., Ribbons, R.R., Lines, E.R. and Jacob, A.L. (2016) "Can we set a global threshold age to define mature forests?" \emph{PeerJ},
+e1595 \doi{10.7717/peerj.1595}
+
+     \item \textbf{Jung, M.} (2015) "LecoS - A python plugin for automated landscape ecology analysis." \emph{Ecological Informatics} 31: 18-21 \doi{10.1016/j.ecoinf.2015.11.006}
+
+     \item Hudson, L., [...], \textbf{Jung, M.} [...] \textit{et al.} (2014) "The PREDICTS database: a global database of how local terrestrial biodiversity responds to human impacts" \emph{Ecology and Evolution}; 4(24):4701-4735 \doi{10.1002/ece3.1303}
+     
+\end{bibenum}
+
+\vspace{8pt}
+
+\subsection{In preparation}
+\vspace{2pt}
+\begin{bibenum}
+
+ \item[] \textbf{Jung, M.}, Rowhani,P. and Scharlemann,J. (in prep) "Major disturbances cause biotic lag effects in local biodiversity globally", \emph{Nature Ecology \& Evolution}
+
+\end{bibenum}
+
+\vspace{8pt}
+\subsection{Other}
+\vspace{2pt}
+\begin{bibenum}
+
+  \item[] \textbf{Jung, M.} (2014) "QSDM Species distribution modelling support for the QGIS Processing toolbox", \href{http://plugins.qgis.org/plugins/QSDM/}{\underline{Download link}}
+  
+  \item[] \textbf{Jung, M.} (2012) "The U.S.-Investors and African palm oil, Report for the SAVE Wildlife Conservation Fund - \href{http://www.save-wildlife.com/downloads/save_the_forest/us_investors_and_african_palm_oil.pdf}{\underline{Download link}}
+
+\end{bibenum}
+
+% ---------------------------------------------------------------------- %
+
+\section{Presentations}
+
+\subsection{Talks}
+\vspace{6pt}
+\restartlist{bibenum} % restart counter
+
+\begin{bibenum}
+
+    \item \textbf{Jung, M.} (2018) "Linking local biodiversity change and landscape-wide land changes", \emph{Macroecology SIG: Annual Meeting 2018 - British Ecological Society}, July 10-11, St.Andrews, UK.
+
+    \item \textbf{Jung, M.} (2017) "The lasting impact of past major disturbances on biodiversity", \emph{Macroecology SIG: Annual Meeting 2017 - British Ecological Society}, July 5-7, London, UK.
+
+    \item \textbf{Jung, M.}, Newbold, T. and Burgess N.D. (2014) "African species' response to land-use change. Assessing the match between an Africa-wide model and fine-scale field data", \emph{7th Early Career Research meeting of the Tropical Ecology Group - British Ecological Society}, August 14- 15, York, UK.
+
+\end{bibenum}
+
+\vspace{6pt}
+\subsection{Posters}
+\restartlist{bibenum} % restart counter
+
+\begin{bibenum}
+    
+    \item \textbf{Jung, M.}, Rowhani, P. and Scharlemann, J. (2017) "Abrupt land change events alter biodiversity", \emph{University of Sussex - Annual research symposium}, December 14- 15, Sussex, UK. \textbf{Best poster prize}
+
+    \item \textbf{Jung, M.}, Rowhani, P. and Scharlemann, J. (2016) "Lasting influences of past land-surface conditions on species assemblages", \emph{British Ecological Society Annual Meeting}, December 11- 14, Liverpool, UK. \textbf{Highly commended} \href{https://figshare.com/articles/Lasting_influences_of_past_land-surface_conditions_on_species_assemblages/7155029}{\underline{Download link}}
+
+    \item \textbf{Jung, M.}, Burgess, N.D. and Newbold, T. (2016) "A comparison of broad-scale model estimates with independent bird data from East-Africa", \emph{Student Conference on Conservation Science}, March 22-24, Cambridge, UK. \href{https://figshare.com/articles/A_comparison_of_broad-scale_model_estimates_with_independent_bird_data_from_East-Africa/4231379}{\underline{Download link}}
+
+    \item \textbf{Jung, M.}, Newbold, T. and Burgess, N.D. (2014) "African species' response to land-use change. Assessing the match between an Africa-wide model and fine-scale field data", \emph{7th Early Career Research meeting of the Tropical Ecology Group - British Ecological Society}, August 14- 15, York, UK. \href{https://figshare.com/articles/African_species_response_to_land_use_change_Assessing_the_match_between_an_Africa_wide_model_and_fine_scale_field_data/1613887}{\underline{Download link}}
+
+    \item Linder J.M., Gorschl\"{u}ter L., Altherr, S., Waltert, M., \textbf{Jung, M.} {\small \emph{(not on abstract)}}, Chapple, A. and Astaras C. (2012) "The anatomy of an oil palm plantation and why African primate diversity is in trouble", \emph{2012 Annual Meeting of the American Association of Physical Anthropologists}, April 11- 14, Portland, Oregon.
+
+\end{bibenum}
+
+% Teaching Experience
+\section{Teaching experience}
+
+\begin{bibenum}
+
+     \item[] 2018 - QGIS workshop for postgraduates - \href{http://sussex.ac.uk/}{University of Sussex}
+     
+     \item[] 2018 - Introduction to Geographical Information systems - \href{http://sussex.ac.uk/}{University of Sussex}
+
+     \item[] 2017 - R course for PhD, MSc and BSc students organized - \href{http://www.r4all.org/}{R4ALL}
+     
+     \item[] 2016-17 - Introduction to Ecology and Conservation - \href{http://sussex.ac.uk/}{University of Sussex}
+
+     \item[] 2015 - Workshop "Landscape Ecology analysis in QGIS" - \href{http://www.lunduniversity.lu.se/}{University of Lund}
+
+     \item[] 2014 - Workshop "Vegetation from space and from the ground" - \href{http://www.icipe.org/}{African Insect Science for Food and Health (ICIPE)}
+
+     \item[] 2013 - Workshop "Landscape Ecology analysis in QGIS" - \href{http://www.lunduniversity.lu.se/}{University of Lund}
+
+\end{bibenum}
+
+\vspace{8pt}
+
+\section{Grants and awards}
+
+\begin{bibenum}
+    \item[] 2018 - Doctoral festival - runner up research image prize in the category science. Volume 120 \textsterling \hspace{1pt} (140 \euro )
+    \item[] 2015 - University of Sussex Researcher led initiative fund for setting up a quantitative analysis group - Volume: 1000  \textsterling \hspace{1pt} (1416 \euro )
+    \item[] 2015-2019 - University of Sussex school of lifescience PhD funding grant - Volume: 14.057 \textsterling (19910 \euro) annually 
+    \item[] 2014 - DANIDA Travel Grant (No. A26811) in support of conducting fieldwork in Kenya and Tanzania - Volume: 13000 DKK (1700 \euro)
+    \item[] 2013-2014 - Monthly scholarship from the Danish ministry of Higher Education and Science - Volume: 5753 DKK (770 \euro) monthly
+    \item[] 2013 - Grant to extent the functionality of my QGIS plugin LecoS from the Universidade de \'{E}vora, Departamento de Biologia, Unidade de Biologia da Conserva\c{c}\"{a}o  - Volume: 250 \euro
+
+\end{bibenum}
+
+\vspace{8pt}
+% ---------------------------------------------------------------------- %
+\section{References}
+
+\vspace{6pt}
+ 
+
+% \item{Available on request}
+
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+\textbf{Prof J{\"o}rn P.W. Scharlemann}\par
+Professor \par
+University of Sussex,\par 
+Falmer, Brighton, BN1 9RH \par
+United Kingdom \par
+\makefield{\faEnvelopeO \hspace{1pt} }{\href{mailto:J.Scharlemann@sussex.ac.uk}{J.Scharlemann@sussex.ac.uk}}
+& 
+\textbf{Dr. Pedram Rowhani}\par
+Senior Lecturer \par
+University of Sussex,\par 
+Falmer, Brighton BN1 9QJ \par
+United Kingdom \par
+\makefield{\faEnvelopeO \hspace{1pt}}{\href{mailto:P.Rowhani@sussex.ac.uk}{P.Rowhani@sussex.ac.uk}}
+\\
+\\
+\textbf{Prof Neil D. Burgess}\par
+Professor \par
+UNEP WCMC,\par 
+219 Huntingdon Road , \par
+CB3 0DL, \par 
+Cambridge, UK \par
+\makefield{\faEnvelopeO \hspace{1pt}}{\href{mailto:Neil.Burgess@unep-wcmc.org}{Neil.Burgess@unep-wcmc.org}}
+& 
+\textbf{Dr. Tim Newbold}\par
+Research fellow \par
+University College London,\par 
+Gower Street, \par
+WC1E 6BT, \par
+London, UK \par 
+\makefield{\faEnvelopeO \hspace{1pt}}{\href{mailto:t.newbold@ucl.ac.uk}{t.newbold@ucl.ac.uk}}
+\\
+
+\end{tabularx}
+
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
